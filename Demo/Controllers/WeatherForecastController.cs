@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace Demo.Controllers
 {
@@ -29,5 +30,9 @@ namespace Demo.Controllers
             })
             .ToArray();
         }
-    }
+        public Phátexample([FromQuery][Required] string name)
+        {
+            return $"Hello, {name}!";
+
+        }
 }
