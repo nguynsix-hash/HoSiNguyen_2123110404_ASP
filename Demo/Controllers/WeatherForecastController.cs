@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.InteropServices.JavaScript;
+using System.Security.Cryptography.Xml;
 
 namespace Demo.Controllers
 {
@@ -31,7 +32,7 @@ namespace Demo.Controllers
             })
             .ToArray();
         }
-        public Phátexamplevvv([FromQuery][Required] string name)
+        public SixvaSex([FromQuery][Required] string name)
         {
             return $"Hello, {name}!";
             JSHost.Current.InvokeVoid("alert", $"Hello, {name}!");
