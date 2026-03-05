@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.InteropServices.JavaScript;
 
 namespace Demo.Controllers
 {
@@ -30,10 +31,10 @@ namespace Demo.Controllers
             })
             .ToArray();
         }
-        public Phátexample([FromQuery][Required] string name)
+        public Phátexamplevvv([FromQuery][Required] string name)
         {
             return $"Hello, {name}!";
-            ccc
+            JSHost.Current.InvokeVoid("alert", $"Hello, {name}!");
 
         }
 }
